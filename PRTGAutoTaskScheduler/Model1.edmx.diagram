@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33dd4594053046beac3ce76e45e7dd54" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="PRTGAutotaskModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.CustomerAutoTaskDetail" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.CustomerPRTGDetail" Width="1.5" PointX="2.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.Customer" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.PRTGGroup" Width="1.5" PointX="2.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.PRTGDevice" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.AutoTaskCompany" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.GroupCompanyMapping" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.AutoTaskConfigurationItem" Width="3.375" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.AutoTaskCompanyLocation" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.DeviceConfigurationItemsMapping" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.GroupCompanyLocationMapping" Width="1.5" PointX="11.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.PRTGAPIHitDetail" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PRTGAutotaskModel.NotificationAlert" Width="1.5" PointX="13.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

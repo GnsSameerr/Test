@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PRTGAutotaskModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AutoTaskCompany">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="AdditionalAddressInformation" Type="nvarchar(max)" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="AlternatePhone1" Type="varchar" MaxLength="50" />
+          <Property Name="AlternatePhone2" Type="varchar" MaxLength="50" />
+          <Property Name="ApiVendorID" Type="nvarchar" MaxLength="500" />
+          <Property Name="AssetValue" Type="varchar" MaxLength="500" />
+          <Property Name="BillToCompanyLocationID" Type="varchar" MaxLength="150" />
+          <Property Name="BillToAdditionalAddressInformation" Type="varchar" MaxLength="150" />
+          <Property Name="BillingAddress1" Type="varchar" MaxLength="150" />
+          <Property Name="BillingAddress2" Type="nvarchar" MaxLength="150" />
+          <Property Name="BillToAddressToUse" Type="int" />
+          <Property Name="BillToAttention" Type="varchar" MaxLength="150" />
+          <Property Name="BillToCity" Type="varchar" MaxLength="150" />
+          <Property Name="BillToCountryID" Type="int" />
+          <Property Name="BillToState" Type="varchar" MaxLength="50" />
+          <Property Name="BillToZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Classification" Type="int" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="150" />
+          <Property Name="CompanyNumber" Type="varchar" MaxLength="150" />
+          <Property Name="CompanyType" Type="int" />
+          <Property Name="CompetitorID" Type="nvarchar(max)" />
+          <Property Name="CountryID" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatedByResourceID" Type="int" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="ImpersonatorCreatorResourceID" Type="nvarchar(max)" />
+          <Property Name="InvoiceEmailMessageID" Type="int" />
+          <Property Name="InvoiceMethod" Type="int" />
+          <Property Name="InvoiceNonContractItemsToParentCompany" Type="varchar" MaxLength="50" />
+          <Property Name="InvoiceTemplateID" Type="int" />
+          <Property Name="IsActive" Type="varchar" MaxLength="50" />
+          <Property Name="IsClientPortalActive" Type="varchar" MaxLength="50" />
+          <Property Name="IsEnabledForComanaged" Type="varchar" MaxLength="50" />
+          <Property Name="IsTaskFireActive" Type="varchar" MaxLength="50" />
+          <Property Name="IsTaxExempt" Type="varchar" MaxLength="50" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="LastTrackedModifiedDateTime" Type="datetime" />
+          <Property Name="MarketSegmentID" Type="nvarchar(max)" />
+          <Property Name="OwnerResourceID" Type="int" />
+          <Property Name="ParentCompanyID" Type="int" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="50" />
+          <Property Name="QuoteEmailMessageID" Type="int" />
+          <Property Name="QuoteTemplateID" Type="int" />
+          <Property Name="SicCode" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="StockMarket" Type="varchar" MaxLength="50" />
+          <Property Name="StockSymbol" Type="varchar" MaxLength="50" />
+          <Property Name="SurveyCompanyRating" Type="varchar" MaxLength="50" />
+          <Property Name="TaxID" Type="varchar" MaxLength="50" />
+          <Property Name="TaxRegionID" Type="nvarchar(max)" />
+          <Property Name="TerritoryID" Type="nvarchar(max)" />
+          <Property Name="WebAddress" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AutoTaskCompanyLocation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="address1" Type="varchar" MaxLength="500" />
+          <Property Name="address2" Type="varchar" MaxLength="500" />
+          <Property Name="alternatePhone1" Type="varchar" MaxLength="500" />
+          <Property Name="alternatePhone2" Type="varchar" MaxLength="500" />
+          <Property Name="city" Type="varchar" MaxLength="100" />
+          <Property Name="companyID" Type="int" />
+          <Property Name="countryID" Type="int" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="fax" Type="varchar" MaxLength="50" />
+          <Property Name="isActive" Type="varchar" MaxLength="50" />
+          <Property Name="isPrimary" Type="varchar" MaxLength="50" />
+          <Property Name="isTaxExempt" Type="nvarchar(max)" />
+          <Property Name="overrideCompanyTaxSettings" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="phone" Type="varchar" MaxLength="50" />
+          <Property Name="postalCode" Type="varchar" MaxLength="50" />
+          <Property Name="roundtripDistance" Type="float" />
+          <Property Name="state" Type="varchar" MaxLength="150" />
+          <Property Name="taxRegionID" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AutoTaskConfigurationItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ApiVendorID" Type="nvarchar(max)" />
+          <Property Name="ConfigurationItemCategoryID" Type="int" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="CompanyLocationID" Type="nvarchar(max)" />
+          <Property Name="ConfigurationItemType" Type="int" />
+          <Property Name="ContactID" Type="nvarchar(max)" />
+          <Property Name="ContractID" Type="nvarchar(max)" />
+          <Property Name="ContractServiceBundleID" Type="nvarchar(max)" />
+          <Property Name="ContractServiceID" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatedByPersonID" Type="int" />
+          <Property Name="DailyCost" Type="nvarchar(max)" />
+          <Property Name="DattoAvailableKilobytes" Type="nvarchar(max)" />
+          <Property Name="DattoDeviceMemoryMegabytes" Type="nvarchar(max)" />
+          <Property Name="DattoDrivesErrors" Type="nvarchar(max)" />
+          <Property Name="DattoHostname" Type="nvarchar(max)" />
+          <Property Name="DattoInternalIP" Type="nvarchar(max)" />
+          <Property Name="DattoKernelVersionID" Type="nvarchar(max)" />
+          <Property Name="DattoLastCheckInDateTime" Type="nvarchar(max)" />
+          <Property Name="DattoNICSpeedKilobitsPerSecond" Type="nvarchar(max)" />
+          <Property Name="DattoNumberOfAgents" Type="nvarchar(max)" />
+          <Property Name="DattoNumberOfDrives" Type="nvarchar(max)" />
+          <Property Name="DattoNumberOfVolumes" Type="nvarchar(max)" />
+          <Property Name="DattoOffsiteUsedBytes" Type="nvarchar(max)" />
+          <Property Name="DattoOSVersionID" Type="nvarchar(max)" />
+          <Property Name="DattoPercentageUsed" Type="nvarchar(max)" />
+          <Property Name="DattoProtectedKilobytes" Type="nvarchar(max)" />
+          <Property Name="DattoRemoteIP" Type="nvarchar(max)" />
+          <Property Name="DattoSerialNumber" Type="nvarchar(max)" />
+          <Property Name="DattoUptimeSeconds" Type="nvarchar(max)" />
+          <Property Name="DattoUsedKilobytes" Type="nvarchar(max)" />
+          <Property Name="DattoZFSVersionID" Type="nvarchar(max)" />
+          <Property Name="DeviceNetworkingID" Type="nvarchar(max)" />
+          <Property Name="HourlyCost" Type="nvarchar(max)" />
+          <Property Name="ImpersonatorCreatorResourceID" Type="nvarchar(max)" />
+          <Property Name="InstallDate" Type="datetime" />
+          <Property Name="InstalledByContactID" Type="nvarchar(max)" />
+          <Property Name="InstalledByID" Type="int" />
+          <Property Name="IsActive" Type="varchar" MaxLength="50" />
+          <Property Name="LastActivityPersonID" Type="int" />
+          <Property Name="LastActivityPersonType" Type="int" />
+          <Property Name="LastModifiedTime" Type="datetime" />
+          <Property Name="Location" Type="varchar" MaxLength="500" />
+          <Property Name="MonthlyCost" Type="nvarchar(max)" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="NumberOfUsers" Type="nvarchar(max)" />
+          <Property Name="ParentConfigurationItemID" Type="nvarchar(max)" />
+          <Property Name="PerUseCost" Type="nvarchar(max)" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ReferenceNumber" Type="varchar" MaxLength="500" />
+          <Property Name="ReferenceTitle" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditAntivirusStatusID" Type="int" />
+          <Property Name="RmmDeviceAuditArchitectureID" Type="int" />
+          <Property Name="RmmDeviceAuditBackupStatusID" Type="nvarchar(max)" />
+          <Property Name="RmmDeviceAuditDescription" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditDeviceTypeID" Type="int" />
+          <Property Name="RmmDeviceAuditDisplayAdaptorID" Type="int" />
+          <Property Name="RmmDeviceAuditDomainID" Type="int" />
+          <Property Name="RmmDeviceAuditExternalIPAddress" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditHostname" Type="varchar" MaxLength="550" />
+          <Property Name="RmmDeviceAuditIPAddress" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditLastUser" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditMacAddress" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditManufacturerID" Type="int" />
+          <Property Name="RmmDeviceAuditMemoryBytes" Type="int" />
+          <Property Name="RmmDeviceAuditMissingPatchCount" Type="int" />
+          <Property Name="RmmDeviceAuditMobileNetworkOperatorID" Type="nvarchar(max)" />
+          <Property Name="RmmDeviceAuditMobileNumber" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditModelID" Type="int" />
+          <Property Name="RmmDeviceAuditMotherboardID" Type="int" />
+          <Property Name="RmmDeviceAuditOperatingSystem" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditPatchStatusID" Type="int" />
+          <Property Name="RmmDeviceAuditProcessorID" Type="int" />
+          <Property Name="RmmDeviceAuditServicePackID" Type="int" />
+          <Property Name="RmmDeviceAuditSNMPContact" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditSNMPLocation" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditSNMPName" Type="varchar" MaxLength="500" />
+          <Property Name="RmmDeviceAuditSoftwareStatusID" Type="int" />
+          <Property Name="RmmDeviceAuditStorageBytes" Type="int" />
+          <Property Name="RmmDeviceID" Type="int" />
+          <Property Name="RmmDeviceUID" Type="varchar" MaxLength="500" />
+          <Property Name="RmmOpenAlertCount" Type="int" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="500" />
+          <Property Name="ServiceBundleID" Type="nvarchar(max)" />
+          <Property Name="ServiceID" Type="nvarchar(max)" />
+          <Property Name="ServiceLevelAgreementID" Type="nvarchar(max)" />
+          <Property Name="SetupFee" Type="nvarchar(max)" />
+          <Property Name="SourceChargeID" Type="nvarchar(max)" />
+          <Property Name="SourceChargeType" Type="nvarchar(max)" />
+          <Property Name="VendorID" Type="nvarchar(max)" />
+          <Property Name="WarrantyExpirationDate" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CustomerAutoTaskDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="bigint" Nullable="false" />
+          <Property Name="username" Type="nvarchar(max)" />
+          <Property Name="password" Type="nvarchar(max)" />
+          <Property Name="ApiIntegrationCode" Type="nvarchar(max)" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CustomerPRTGDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="bigint" Nullable="false" />
+          <Property Name="PRTGServerURL" Type="nvarchar(max)" />
+          <Property Name="PRTGServerUserName" Type="nvarchar(max)" />
+          <Property Name="PRTGServerPassword" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeviceConfigurationItemsMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeviceId" Type="int" />
+          <Property Name="DeviceName" Type="nvarchar(max)" />
+          <Property Name="RootGroupID" Type="int" />
+          <Property Name="PRTGGroupID" Type="int" />
+          <Property Name="PRTGGroupName" Type="varchar(max)" />
+          <Property Name="AutoTaskCompanyID" Type="int" />
+          <Property Name="AutoTaskCompanyName" Type="nvarchar(max)" />
+          <Property Name="ConfigurationItemId" Type="int" />
+          <Property Name="ConfigurationItemTittle" Type="nvarchar(max)" />
+          <Property Name="DateMapped" Type="datetime" />
+          <Property Name="DateUpdated" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="GroupCompanyLocationMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="GroupName" Type="nvarchar(max)" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="CompanyName" Type="varchar(max)" />
+          <Property Name="CompanyLocationId" Type="int" />
+          <Property Name="DateMapped" Type="datetime" />
+          <Property Name="DateUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GroupCompanyMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="GroupName" Type="nvarchar(max)" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="150" />
+          <Property Name="DateMapped" Type="datetime" />
+          <Property Name="DateUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NotificationAlert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteName" Type="nvarchar(max)" />
+          <Property Name="Device" Type="nvarchar(max)" />
+          <Property Name="PRTGGroup" Type="varchar(max)" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Status" Type="varchar(max)" />
+          <Property Name="Message" Type="varchar(max)" />
+          <Property Name="Sensor" Type="varchar(max)" />
+          <Property Name="LastStatus" Type="varchar(max)" />
+          <Property Name="Up" Type="varchar" MaxLength="50" />
+          <Property Name="Down" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Company" Type="varchar(max)" />
+          <Property Name="CompanyID" Type="int" />
+        </EntityType>
+        <EntityType Name="PRTGAPIHitDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteName" Type="varchar" MaxLength="150" />
+          <Property Name="Device" Type="nvarchar" MaxLength="150" />
+          <Property Name="Group" Type="nvarchar" MaxLength="150" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Status" Type="nvarchar" MaxLength="150" />
+          <Property Name="DownMessage" Type="nvarchar(max)" />
+          <Property Name="UpMessage" Type="nvarchar(max)" />
+          <Property Name="APIHitDate" Type="datetime" />
+          <Property Name="IsTicketCreated" Type="varchar" MaxLength="50" />
+          <Property Name="TicketNumber" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PRTGDevices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Group" Type="nvarchar(max)" />
+          <Property Name="Host" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="Probe" Type="nvarchar(max)" />
+          <Property Name="Dependency" Type="nvarchar(max)" />
+          <Property Name="DeviceId" Type="int" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Active" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayType" Type="nvarchar(max)" />
+          <Property Name="ParentId" Type="int" />
+        </EntityType>
+        <EntityType Name="PRTGGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Probe" Type="nvarchar(max)" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="DisplayType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="PRTGAutotaskModelStoreContainer">
+          <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AutoTaskCompany" EntityType="Self.AutoTaskCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AutoTaskCompanyLocation" EntityType="Self.AutoTaskCompanyLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AutoTaskConfigurationItems" EntityType="Self.AutoTaskConfigurationItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerAutoTaskDetails" EntityType="Self.CustomerAutoTaskDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerPRTGDetails" EntityType="Self.CustomerPRTGDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceConfigurationItemsMapping" EntityType="Self.DeviceConfigurationItemsMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupCompanyLocationMapping" EntityType="Self.GroupCompanyLocationMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupCompanyMapping" EntityType="Self.GroupCompanyMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationAlert" EntityType="Self.NotificationAlert" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRTGAPIHitDetails" EntityType="Self.PRTGAPIHitDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRTGDevices" EntityType="Self.PRTGDevices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRTGGroup" EntityType="Self.PRTGGroup" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PRTGAutotaskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CustomerAutoTaskDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int64" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApiIntegrationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CustomerPRTGDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int64" Nullable="false" />
+          <Property Name="PRTGServerURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRTGServerUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRTGServerPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRTGGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Probe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="PRTGAutotaskEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+          <EntitySet Name="CustomerAutoTaskDetails" EntityType="Self.CustomerAutoTaskDetail" />
+          <EntitySet Name="CustomerPRTGDetails" EntityType="Self.CustomerPRTGDetail" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="PRTGGroups" EntityType="Self.PRTGGroup" />
+          <EntitySet Name="PRTGDevices" EntityType="PRTGAutotaskModel.PRTGDevice" />
+          <EntitySet Name="AutoTaskCompanies" EntityType="PRTGAutotaskModel.AutoTaskCompany" />
+          <EntitySet Name="GroupCompanyMappings" EntityType="PRTGAutotaskModel.GroupCompanyMapping" />
+          <EntitySet Name="AutoTaskConfigurationItems" EntityType="PRTGAutotaskModel.AutoTaskConfigurationItem" />
+          <EntitySet Name="AutoTaskCompanyLocations" EntityType="PRTGAutotaskModel.AutoTaskCompanyLocation" />
+          <EntitySet Name="DeviceConfigurationItemsMappings" EntityType="PRTGAutotaskModel.DeviceConfigurationItemsMapping" />
+          <EntitySet Name="GroupCompanyLocationMappings" EntityType="PRTGAutotaskModel.GroupCompanyLocationMapping" />
+          <EntitySet Name="PRTGAPIHitDetails" EntityType="PRTGAutotaskModel.PRTGAPIHitDetail" />
+          <EntitySet Name="NotificationAlerts" EntityType="PRTGAutotaskModel.NotificationAlert" />
+        </EntityContainer>
+        <EntityType Name="PRTGDevice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Host" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Probe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Dependency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="AutoTaskCompany">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="AdditionalAddressInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AlternatePhone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AlternatePhone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApiVendorID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AssetValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="BillToCompanyLocationID" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BillToAdditionalAddressInformation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BillingAddress1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BillingAddress2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BillToAddressToUse" Type="Int32" />
+          <Property Name="BillToAttention" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BillToCity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BillToCountryID" Type="Int32" />
+          <Property Name="BillToState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BillToZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Classification" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyNumber" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyType" Type="Int32" />
+          <Property Name="CompetitorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CountryID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedByResourceID" Type="Int32" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImpersonatorCreatorResourceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceEmailMessageID" Type="Int32" />
+          <Property Name="InvoiceMethod" Type="Int32" />
+          <Property Name="InvoiceNonContractItemsToParentCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceTemplateID" Type="Int32" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsClientPortalActive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsEnabledForComanaged" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsTaskFireActive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsTaxExempt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Precision="3" />
+          <Property Name="LastTrackedModifiedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="MarketSegmentID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerResourceID" Type="Int32" />
+          <Property Name="ParentCompanyID" Type="Int32" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QuoteEmailMessageID" Type="Int32" />
+          <Property Name="QuoteTemplateID" Type="Int32" />
+          <Property Name="SicCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StockMarket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StockSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SurveyCompanyRating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaxID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TaxRegionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TerritoryID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GroupCompanyMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DateMapped" Type="DateTime" Precision="3" />
+          <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="AutoTaskConfigurationItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ApiVendorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConfigurationItemCategoryID" Type="Int32" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="CompanyLocationID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConfigurationItemType" Type="Int32" />
+          <Property Name="ContactID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractServiceBundleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractServiceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedByPersonID" Type="Int32" />
+          <Property Name="DailyCost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoAvailableKilobytes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoDeviceMemoryMegabytes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoDrivesErrors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoHostname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoInternalIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoKernelVersionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoLastCheckInDateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoNICSpeedKilobitsPerSecond" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoNumberOfAgents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoNumberOfDrives" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoNumberOfVolumes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoOffsiteUsedBytes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoOSVersionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoPercentageUsed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoProtectedKilobytes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoRemoteIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoSerialNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoUptimeSeconds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoUsedKilobytes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DattoZFSVersionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceNetworkingID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HourlyCost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImpersonatorCreatorResourceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InstallDate" Type="DateTime" Precision="3" />
+          <Property Name="InstalledByContactID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InstalledByID" Type="Int32" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastActivityPersonID" Type="Int32" />
+          <Property Name="LastActivityPersonType" Type="Int32" />
+          <Property Name="LastModifiedTime" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MonthlyCost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumberOfUsers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentConfigurationItemID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PerUseCost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="ReferenceNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ReferenceTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditAntivirusStatusID" Type="Int32" />
+          <Property Name="RmmDeviceAuditArchitectureID" Type="Int32" />
+          <Property Name="RmmDeviceAuditBackupStatusID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RmmDeviceAuditDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditDeviceTypeID" Type="Int32" />
+          <Property Name="RmmDeviceAuditDisplayAdaptorID" Type="Int32" />
+          <Property Name="RmmDeviceAuditDomainID" Type="Int32" />
+          <Property Name="RmmDeviceAuditExternalIPAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditHostname" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditIPAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditMacAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditManufacturerID" Type="Int32" />
+          <Property Name="RmmDeviceAuditMemoryBytes" Type="Int32" />
+          <Property Name="RmmDeviceAuditMissingPatchCount" Type="Int32" />
+          <Property Name="RmmDeviceAuditMobileNetworkOperatorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RmmDeviceAuditMobileNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditModelID" Type="Int32" />
+          <Property Name="RmmDeviceAuditMotherboardID" Type="Int32" />
+          <Property Name="RmmDeviceAuditOperatingSystem" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditPatchStatusID" Type="Int32" />
+          <Property Name="RmmDeviceAuditProcessorID" Type="Int32" />
+          <Property Name="RmmDeviceAuditServicePackID" Type="Int32" />
+          <Property Name="RmmDeviceAuditSNMPContact" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditSNMPLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditSNMPName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmDeviceAuditSoftwareStatusID" Type="Int32" />
+          <Property Name="RmmDeviceAuditStorageBytes" Type="Int32" />
+          <Property Name="RmmDeviceID" Type="Int32" />
+          <Property Name="RmmDeviceUID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RmmOpenAlertCount" Type="Int32" />
+          <Property Name="SerialNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceBundleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceLevelAgreementID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SetupFee" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SourceChargeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SourceChargeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WarrantyExpirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RmmDeviceAuditLastUser" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AutoTaskCompanyLocation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="address1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="address2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="alternatePhone1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="alternatePhone2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="companyID" Type="Int32" />
+          <Property Name="countryID" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isActive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isPrimary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isTaxExempt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="overrideCompanyTaxSettings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="postalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="roundtripDistance" Type="Double" />
+          <Property Name="state" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="taxRegionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DeviceConfigurationItemsMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeviceId" Type="Int32" />
+          <Property Name="DeviceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConfigurationItemId" Type="Int32" />
+          <Property Name="ConfigurationItemTittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateMapped" Type="DateTime" Precision="3" />
+          <Property Name="DateUpdated" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PRTGGroupID" Type="Int32" />
+          <Property Name="PRTGGroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AutoTaskCompanyID" Type="Int32" />
+          <Property Name="AutoTaskCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RootGroupID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="GroupCompanyLocationMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyLocationId" Type="Int32" />
+          <Property Name="DateMapped" Type="DateTime" Precision="3" />
+          <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PRTGAPIHitDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Device" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DownMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UpMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="APIHitDate" Type="DateTime" Precision="3" />
+          <Property Name="IsTicketCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TicketNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NotificationAlert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRTGGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Sensor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LastStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Up" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Down" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyID" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PRTGAutotaskModelStoreContainer" CdmEntityContainer="PRTGAutotaskEntities">
+          <EntitySetMapping Name="C__EFMigrationsHistory">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.C__EFMigrationsHistory">
+              <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerAutoTaskDetails">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.CustomerAutoTaskDetail">
+              <MappingFragment StoreEntitySet="CustomerAutoTaskDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="ApiIntegrationCode" ColumnName="ApiIntegrationCode" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerPRTGDetails">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.CustomerPRTGDetail">
+              <MappingFragment StoreEntitySet="CustomerPRTGDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="PRTGServerURL" ColumnName="PRTGServerURL" />
+                <ScalarProperty Name="PRTGServerUserName" ColumnName="PRTGServerUserName" />
+                <ScalarProperty Name="PRTGServerPassword" ColumnName="PRTGServerPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRTGGroups">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.PRTGGroup">
+              <MappingFragment StoreEntitySet="PRTGGroup">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Probe" ColumnName="Probe" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRTGDevices">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.PRTGDevice">
+              <MappingFragment StoreEntitySet="PRTGDevices">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Dependency" ColumnName="Dependency" />
+                <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="Probe" ColumnName="Probe" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoTaskCompanies">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.AutoTaskCompany">
+              <MappingFragment StoreEntitySet="AutoTaskCompany">
+                <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+                <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+                <ScalarProperty Name="TaxRegionID" ColumnName="TaxRegionID" />
+                <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+                <ScalarProperty Name="SurveyCompanyRating" ColumnName="SurveyCompanyRating" />
+                <ScalarProperty Name="StockSymbol" ColumnName="StockSymbol" />
+                <ScalarProperty Name="StockMarket" ColumnName="StockMarket" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="SicCode" ColumnName="SicCode" />
+                <ScalarProperty Name="QuoteTemplateID" ColumnName="QuoteTemplateID" />
+                <ScalarProperty Name="QuoteEmailMessageID" ColumnName="QuoteEmailMessageID" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ParentCompanyID" ColumnName="ParentCompanyID" />
+                <ScalarProperty Name="OwnerResourceID" ColumnName="OwnerResourceID" />
+                <ScalarProperty Name="MarketSegmentID" ColumnName="MarketSegmentID" />
+                <ScalarProperty Name="LastTrackedModifiedDateTime" ColumnName="LastTrackedModifiedDateTime" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsTaxExempt" ColumnName="IsTaxExempt" />
+                <ScalarProperty Name="IsTaskFireActive" ColumnName="IsTaskFireActive" />
+                <ScalarProperty Name="IsEnabledForComanaged" ColumnName="IsEnabledForComanaged" />
+                <ScalarProperty Name="IsClientPortalActive" ColumnName="IsClientPortalActive" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InvoiceTemplateID" ColumnName="InvoiceTemplateID" />
+                <ScalarProperty Name="InvoiceNonContractItemsToParentCompany" ColumnName="InvoiceNonContractItemsToParentCompany" />
+                <ScalarProperty Name="InvoiceMethod" ColumnName="InvoiceMethod" />
+                <ScalarProperty Name="InvoiceEmailMessageID" ColumnName="InvoiceEmailMessageID" />
+                <ScalarProperty Name="ImpersonatorCreatorResourceID" ColumnName="ImpersonatorCreatorResourceID" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="CreatedByResourceID" ColumnName="CreatedByResourceID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CompetitorID" ColumnName="CompetitorID" />
+                <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+                <ScalarProperty Name="CompanyNumber" ColumnName="CompanyNumber" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="BillToZipCode" ColumnName="BillToZipCode" />
+                <ScalarProperty Name="BillToState" ColumnName="BillToState" />
+                <ScalarProperty Name="BillToCountryID" ColumnName="BillToCountryID" />
+                <ScalarProperty Name="BillToCity" ColumnName="BillToCity" />
+                <ScalarProperty Name="BillToAttention" ColumnName="BillToAttention" />
+                <ScalarProperty Name="BillToAddressToUse" ColumnName="BillToAddressToUse" />
+                <ScalarProperty Name="BillingAddress2" ColumnName="BillingAddress2" />
+                <ScalarProperty Name="BillingAddress1" ColumnName="BillingAddress1" />
+                <ScalarProperty Name="BillToAdditionalAddressInformation" ColumnName="BillToAdditionalAddressInformation" />
+                <ScalarProperty Name="BillToCompanyLocationID" ColumnName="BillToCompanyLocationID" />
+                <ScalarProperty Name="AssetValue" ColumnName="AssetValue" />
+                <ScalarProperty Name="ApiVendorID" ColumnName="ApiVendorID" />
+                <ScalarProperty Name="AlternatePhone2" ColumnName="AlternatePhone2" />
+                <ScalarProperty Name="AlternatePhone1" ColumnName="AlternatePhone1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="AdditionalAddressInformation" ColumnName="AdditionalAddressInformation" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupCompanyMappings">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.GroupCompanyMapping">
+              <MappingFragment StoreEntitySet="GroupCompanyMapping">
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateMapped" ColumnName="DateMapped" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoTaskConfigurationItems">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.AutoTaskConfigurationItem">
+              <MappingFragment StoreEntitySet="AutoTaskConfigurationItems">
+                <ScalarProperty Name="RmmDeviceAuditLastUser" ColumnName="RmmDeviceAuditLastUser" />
+                <ScalarProperty Name="WarrantyExpirationDate" ColumnName="WarrantyExpirationDate" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="SourceChargeType" ColumnName="SourceChargeType" />
+                <ScalarProperty Name="SourceChargeID" ColumnName="SourceChargeID" />
+                <ScalarProperty Name="SetupFee" ColumnName="SetupFee" />
+                <ScalarProperty Name="ServiceLevelAgreementID" ColumnName="ServiceLevelAgreementID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ServiceBundleID" ColumnName="ServiceBundleID" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="RmmOpenAlertCount" ColumnName="RmmOpenAlertCount" />
+                <ScalarProperty Name="RmmDeviceUID" ColumnName="RmmDeviceUID" />
+                <ScalarProperty Name="RmmDeviceID" ColumnName="RmmDeviceID" />
+                <ScalarProperty Name="RmmDeviceAuditStorageBytes" ColumnName="RmmDeviceAuditStorageBytes" />
+                <ScalarProperty Name="RmmDeviceAuditSoftwareStatusID" ColumnName="RmmDeviceAuditSoftwareStatusID" />
+                <ScalarProperty Name="RmmDeviceAuditSNMPName" ColumnName="RmmDeviceAuditSNMPName" />
+                <ScalarProperty Name="RmmDeviceAuditSNMPLocation" ColumnName="RmmDeviceAuditSNMPLocation" />
+                <ScalarProperty Name="RmmDeviceAuditSNMPContact" ColumnName="RmmDeviceAuditSNMPContact" />
+                <ScalarProperty Name="RmmDeviceAuditServicePackID" ColumnName="RmmDeviceAuditServicePackID" />
+                <ScalarProperty Name="RmmDeviceAuditProcessorID" ColumnName="RmmDeviceAuditProcessorID" />
+                <ScalarProperty Name="RmmDeviceAuditPatchStatusID" ColumnName="RmmDeviceAuditPatchStatusID" />
+                <ScalarProperty Name="RmmDeviceAuditOperatingSystem" ColumnName="RmmDeviceAuditOperatingSystem" />
+                <ScalarProperty Name="RmmDeviceAuditMotherboardID" ColumnName="RmmDeviceAuditMotherboardID" />
+                <ScalarProperty Name="RmmDeviceAuditModelID" ColumnName="RmmDeviceAuditModelID" />
+                <ScalarProperty Name="RmmDeviceAuditMobileNumber" ColumnName="RmmDeviceAuditMobileNumber" />
+                <ScalarProperty Name="RmmDeviceAuditMobileNetworkOperatorID" ColumnName="RmmDeviceAuditMobileNetworkOperatorID" />
+                <ScalarProperty Name="RmmDeviceAuditMissingPatchCount" ColumnName="RmmDeviceAuditMissingPatchCount" />
+                <ScalarProperty Name="RmmDeviceAuditMemoryBytes" ColumnName="RmmDeviceAuditMemoryBytes" />
+                <ScalarProperty Name="RmmDeviceAuditManufacturerID" ColumnName="RmmDeviceAuditManufacturerID" />
+                <ScalarProperty Name="RmmDeviceAuditMacAddress" ColumnName="RmmDeviceAuditMacAddress" />
+                <ScalarProperty Name="RmmDeviceAuditIPAddress" ColumnName="RmmDeviceAuditIPAddress" />
+                <ScalarProperty Name="RmmDeviceAuditHostname" ColumnName="RmmDeviceAuditHostname" />
+                <ScalarProperty Name="RmmDeviceAuditExternalIPAddress" ColumnName="RmmDeviceAuditExternalIPAddress" />
+                <ScalarProperty Name="RmmDeviceAuditDomainID" ColumnName="RmmDeviceAuditDomainID" />
+                <ScalarProperty Name="RmmDeviceAuditDisplayAdaptorID" ColumnName="RmmDeviceAuditDisplayAdaptorID" />
+                <ScalarProperty Name="RmmDeviceAuditDeviceTypeID" ColumnName="RmmDeviceAuditDeviceTypeID" />
+                <ScalarProperty Name="RmmDeviceAuditDescription" ColumnName="RmmDeviceAuditDescription" />
+                <ScalarProperty Name="RmmDeviceAuditBackupStatusID" ColumnName="RmmDeviceAuditBackupStatusID" />
+                <ScalarProperty Name="RmmDeviceAuditArchitectureID" ColumnName="RmmDeviceAuditArchitectureID" />
+                <ScalarProperty Name="RmmDeviceAuditAntivirusStatusID" ColumnName="RmmDeviceAuditAntivirusStatusID" />
+                <ScalarProperty Name="ReferenceTitle" ColumnName="ReferenceTitle" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="PerUseCost" ColumnName="PerUseCost" />
+                <ScalarProperty Name="ParentConfigurationItemID" ColumnName="ParentConfigurationItemID" />
+                <ScalarProperty Name="NumberOfUsers" ColumnName="NumberOfUsers" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="MonthlyCost" ColumnName="MonthlyCost" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LastModifiedTime" ColumnName="LastModifiedTime" />
+                <ScalarProperty Name="LastActivityPersonType" ColumnName="LastActivityPersonType" />
+                <ScalarProperty Name="LastActivityPersonID" ColumnName="LastActivityPersonID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InstalledByID" ColumnName="InstalledByID" />
+                <ScalarProperty Name="InstalledByContactID" ColumnName="InstalledByContactID" />
+                <ScalarProperty Name="InstallDate" ColumnName="InstallDate" />
+                <ScalarProperty Name="ImpersonatorCreatorResourceID" ColumnName="ImpersonatorCreatorResourceID" />
+                <ScalarProperty Name="HourlyCost" ColumnName="HourlyCost" />
+                <ScalarProperty Name="DeviceNetworkingID" ColumnName="DeviceNetworkingID" />
+                <ScalarProperty Name="DattoZFSVersionID" ColumnName="DattoZFSVersionID" />
+                <ScalarProperty Name="DattoUsedKilobytes" ColumnName="DattoUsedKilobytes" />
+                <ScalarProperty Name="DattoUptimeSeconds" ColumnName="DattoUptimeSeconds" />
+                <ScalarProperty Name="DattoSerialNumber" ColumnName="DattoSerialNumber" />
+                <ScalarProperty Name="DattoRemoteIP" ColumnName="DattoRemoteIP" />
+                <ScalarProperty Name="DattoProtectedKilobytes" ColumnName="DattoProtectedKilobytes" />
+                <ScalarProperty Name="DattoPercentageUsed" ColumnName="DattoPercentageUsed" />
+                <ScalarProperty Name="DattoOSVersionID" ColumnName="DattoOSVersionID" />
+                <ScalarProperty Name="DattoOffsiteUsedBytes" ColumnName="DattoOffsiteUsedBytes" />
+                <ScalarProperty Name="DattoNumberOfVolumes" ColumnName="DattoNumberOfVolumes" />
+                <ScalarProperty Name="DattoNumberOfDrives" ColumnName="DattoNumberOfDrives" />
+                <ScalarProperty Name="DattoNumberOfAgents" ColumnName="DattoNumberOfAgents" />
+                <ScalarProperty Name="DattoNICSpeedKilobitsPerSecond" ColumnName="DattoNICSpeedKilobitsPerSecond" />
+                <ScalarProperty Name="DattoLastCheckInDateTime" ColumnName="DattoLastCheckInDateTime" />
+                <ScalarProperty Name="DattoKernelVersionID" ColumnName="DattoKernelVersionID" />
+                <ScalarProperty Name="DattoInternalIP" ColumnName="DattoInternalIP" />
+                <ScalarProperty Name="DattoHostname" ColumnName="DattoHostname" />
+                <ScalarProperty Name="DattoDrivesErrors" ColumnName="DattoDrivesErrors" />
+                <ScalarProperty Name="DattoDeviceMemoryMegabytes" ColumnName="DattoDeviceMemoryMegabytes" />
+                <ScalarProperty Name="DattoAvailableKilobytes" ColumnName="DattoAvailableKilobytes" />
+                <ScalarProperty Name="DailyCost" ColumnName="DailyCost" />
+                <ScalarProperty Name="CreatedByPersonID" ColumnName="CreatedByPersonID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ContractServiceID" ColumnName="ContractServiceID" />
+                <ScalarProperty Name="ContractServiceBundleID" ColumnName="ContractServiceBundleID" />
+                <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="ConfigurationItemType" ColumnName="ConfigurationItemType" />
+                <ScalarProperty Name="CompanyLocationID" ColumnName="CompanyLocationID" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="ConfigurationItemCategoryID" ColumnName="ConfigurationItemCategoryID" />
+                <ScalarProperty Name="ApiVendorID" ColumnName="ApiVendorID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoTaskCompanyLocations">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.AutoTaskCompanyLocation">
+              <MappingFragment StoreEntitySet="AutoTaskCompanyLocation">
+                <ScalarProperty Name="taxRegionID" ColumnName="taxRegionID" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="roundtripDistance" ColumnName="roundtripDistance" />
+                <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="overrideCompanyTaxSettings" ColumnName="overrideCompanyTaxSettings" />
+                <ScalarProperty Name="isTaxExempt" ColumnName="isTaxExempt" />
+                <ScalarProperty Name="isPrimary" ColumnName="isPrimary" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="alternatePhone2" ColumnName="alternatePhone2" />
+                <ScalarProperty Name="alternatePhone1" ColumnName="alternatePhone1" />
+                <ScalarProperty Name="address2" ColumnName="address2" />
+                <ScalarProperty Name="address1" ColumnName="address1" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceConfigurationItemsMappings">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.DeviceConfigurationItemsMapping">
+              <MappingFragment StoreEntitySet="DeviceConfigurationItemsMapping">
+                <ScalarProperty Name="RootGroupID" ColumnName="RootGroupID" />
+                <ScalarProperty Name="AutoTaskCompanyName" ColumnName="AutoTaskCompanyName" />
+                <ScalarProperty Name="AutoTaskCompanyID" ColumnName="AutoTaskCompanyID" />
+                <ScalarProperty Name="PRTGGroupName" ColumnName="PRTGGroupName" />
+                <ScalarProperty Name="PRTGGroupID" ColumnName="PRTGGroupID" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateMapped" ColumnName="DateMapped" />
+                <ScalarProperty Name="ConfigurationItemTittle" ColumnName="ConfigurationItemTittle" />
+                <ScalarProperty Name="ConfigurationItemId" ColumnName="ConfigurationItemId" />
+                <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupCompanyLocationMappings">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.GroupCompanyLocationMapping">
+              <MappingFragment StoreEntitySet="GroupCompanyLocationMapping">
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateMapped" ColumnName="DateMapped" />
+                <ScalarProperty Name="CompanyLocationId" ColumnName="CompanyLocationId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRTGAPIHitDetails">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.PRTGAPIHitDetail">
+              <MappingFragment StoreEntitySet="PRTGAPIHitDetails">
+                <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+                <ScalarProperty Name="IsTicketCreated" ColumnName="IsTicketCreated" />
+                <ScalarProperty Name="APIHitDate" ColumnName="APIHitDate" />
+                <ScalarProperty Name="UpMessage" ColumnName="UpMessage" />
+                <ScalarProperty Name="DownMessage" ColumnName="DownMessage" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationAlerts">
+            <EntityTypeMapping TypeName="PRTGAutotaskModel.NotificationAlert">
+              <MappingFragment StoreEntitySet="NotificationAlert">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Down" ColumnName="Down" />
+                <ScalarProperty Name="Up" ColumnName="Up" />
+                <ScalarProperty Name="LastStatus" ColumnName="LastStatus" />
+                <ScalarProperty Name="Sensor" ColumnName="Sensor" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PRTGGroup" ColumnName="PRTGGroup" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
