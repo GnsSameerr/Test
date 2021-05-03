@@ -45,6 +45,6 @@ namespace PRTGAutoTaskScheduler.Model.AutoTaskLocation
         public object taxRegionID { get; set; }
     }
 
-    //Comment for checking GIT 
+    //Comment for checking GIT  22
 
 }
